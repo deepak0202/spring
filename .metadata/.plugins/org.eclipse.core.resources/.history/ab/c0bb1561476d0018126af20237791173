@@ -1,0 +1,9 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
+<<form:errors path="student.*"/>
+
+you are register with 
+firstName = ${student.firstName}
+lastName = ${student.lastName}
+age = ${student.age}
+mobileNumber = ${student.mobileNumber}

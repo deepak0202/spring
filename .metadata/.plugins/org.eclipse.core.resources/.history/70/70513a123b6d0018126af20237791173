@@ -1,0 +1,38 @@
+package com.bridgeit.pojo;
+
+public class Student 
+{
+	private String firstName;
+	private String lastName;
+	private int age;
+	private long mobileNumber;
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		System.out.println("setfirstName");
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		System.out.println("setLastName");
+		this.lastName = lastName;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public long getMobileNumber() {
+		return mobileNumber;
+	}
+	public void setMobileNumber(long mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
+	
+
+}

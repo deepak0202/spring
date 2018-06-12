@@ -1,0 +1,8 @@
+<form action="/register.html" method="post">
+firstName :
+<input type="text" name="firstName"/>
+<input type="text" name="lastName"/>
+<input type="text" name="age"/>
+<input type="text" name="mobileNumber"/>
+<input type="submit" value="register"/>
+</form>

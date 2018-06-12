@@ -1,0 +1,43 @@
+package com.bridgeit.springCore.wire;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+public class Customer 
+{
+	private String firstName;
+	private String lastName;
+	
+	public Customer()
+	{
+		System.out.println("customer()");
+	}
+
+	public void setFirstName(String firstName) {
+		System.out.println("setFirstName");
+		this.firstName = firstName;
+	}
+
+	public void setLastName(String lastName) {
+		System.out.println("setLastName");
+		this.lastName = lastName;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+	@PostConstruct
+	public void init()
+	{
+		System.out.println("init");
+	}
+	@PreDestroy
+	public void destroy()
+	{
+		System.out.println("destroy");
+	}
+}

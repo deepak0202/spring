@@ -1,0 +1,11 @@
+<form action="register" method="post">
+firstName :
+<input type="text" name="firstName"/><br>
+lastName :
+<input type="text" name="lastName"/><br>
+age :
+<input type="text" name="age"/><br>
+mobileNumber :
+<input type="text" name="mobileNumber"/><br>
+<input type="submit" value="register"/>
+</form>

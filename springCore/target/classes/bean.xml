@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean id="t" class=" " scope = "prototype">
+    </bean>
+    
+    
+    <bean id="p" class="com.bridgeit.springCore.PersonPojo">
+    <property name="firstName" value="deepak"></property>
+    <property name="age" value="25"></property>
+    <property name="lastName" value="singh"></property>
+    </bean>
+    
+    
+    
+    <bean id="p1" class="com.bridgeit.springCore.PersonConstructorInjectionPojo">
+    <constructor-arg>
+    <value>deepak</value>
+    </constructor-arg>
+    <constructor-arg>
+    <value>singh</value>
+    </constructor-arg>
+    <constructor-arg >
+    <value>25</value>
+    </constructor-arg>
+    </bean>
+    
+    
+    <bean id="l" class="com.bridgeit.springCore.LionConIndexPojo">
+    <constructor-arg value="white" index="1"/>
+    <constructor-arg value="33" index="2"/>
+    <constructor-arg value="raja" index="0"/>
+    </bean>
+    
+    
+    <bean id="d" class="com.bridgeit.springCore.DogPojo">
+    <constructor-arg value="jd"/>
+    <constructor-arg value="black"/>
+    <constructor-arg value="10"/>
+    </bean>
+    
+    
+    <bean id="st1" class="com.bridgeit.springCore.StudentCollectoinPojo">
+    <property name="firstName" value="abc"/>
+    <property name="age" value="22"/>
+    <property name="weight" value="55.5"/>
+    <property name="marks">
+    <list>
+    <value>99</value>
+    <value>199</value>
+    <value>919</value>
+    </list>
+    </property>
+    <property name="project">
+    <list>
+    <value>citi bank project</value>
+    <value>library management</value>
+    <value>flipcart</value>
+    </list>
+    </property>
+    <property name="mobileNumber">
+    <list>
+    <value>898400488</value>
+    <value>897878967</value>
+    <value>787880709</value>
+    </list>
+    </property>
+    <property name="emailIds">
+    <set>
+    <value>a@gmail</value>
+    <value>b@a</value>
+    <value>c@g</value>
+    </set>
+    </property>
+    <property name="educations">
+    <map>
+    <entry key="degree" value="BE"/>
+    <entry key="degree" value="ME"/>
+    </map>
+    </property><property name="skills">
+    <props>
+    <prop key="basics"> C and c++</prop>
+    <prop key="advanced"> java and j2ee</prop>
+    </props>
+    </property>
+    <property name="address" ref="a1"/>
+    </bean>
+    
+    <bean id="a1" class="com.bridgeit.springCore.Address">
+    <property name="houseNo" value="12/B"/>
+    <property name="streetName" value="BTM"/>
+    </bean>
+    
+    
+    
+</beans>

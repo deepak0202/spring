@@ -1,0 +1,42 @@
+package com.bridgeit.dao;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.bridgeit.pojo.Student;
+
+public class StudentDAOImpl implements StudentDAO {
+
+	private DataSource dataSource;
+
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+
+	@Override
+	public void insert(Student student) {
+
+		String query = "insert into student values(?,?,?,?,?,?)";
+
+		JdbcTemplate template = new JdbcTemplate(dataSource);
+
+		Object[] args = { student.getFirstName(), student.getLastName(), student.getEmail(), student.getPassword(),
+				student.getMobileNumber(), student.getAge() };
+		
+		int result = template.update(query, args);
+		
+		if(result != 0) {
+			System.out.println("Student inserted successfully with firstName : "+student.getFirstName());
+		}else {
+			System.out.println("Error in inserting the student with firstName : "+student.getFirstName());
+		}
+	}
+
+	@Override
+	public Student getByEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

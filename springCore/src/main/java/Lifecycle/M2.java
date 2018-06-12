@@ -1,0 +1,20 @@
+package Lifecycle;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class M2 
+{
+	public static void main(String[] args) 
+	{
+		ClassPathXmlApplicationContext cpr = new ClassPathXmlApplicationContext("bean3.xml");
+		System.out.println(1);
+		Employee s1 =  (Employee) cpr.getBean("emp1");
+		System.out.println(2);
+		System.out.println(s1.getfName());
+		System.out.println(3);
+		System.out.println(s1.getlName());
+		cpr.registerShutdownHook();
+		
+	}
+
+}

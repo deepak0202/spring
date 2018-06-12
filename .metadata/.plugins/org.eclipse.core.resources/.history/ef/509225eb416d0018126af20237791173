@@ -1,0 +1,5 @@
+you are register with 
+firstName = ${student.firstName}
+lastName = ${student.lastName}
+age = ${student.age}
+mobileNumber = ${student.mobileNumber}

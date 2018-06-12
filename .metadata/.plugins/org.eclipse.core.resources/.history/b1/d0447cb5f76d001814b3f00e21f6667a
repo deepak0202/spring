@@ -1,0 +1,19 @@
+package com.bridgeit.dao;
+
+import com.bridgeit.pojo.Student;
+
+public class StudentDAOImpl implements StudentDAO {
+
+	@Override
+	public void insert(Student student) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Student getByEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

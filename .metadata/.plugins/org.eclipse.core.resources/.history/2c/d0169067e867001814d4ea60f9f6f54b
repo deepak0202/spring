@@ -1,0 +1,33 @@
+package com.bridgeit.springCore.wire;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class Student 
+{
+	private String firstName;
+	private String lastName;
+	private Address address;
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	@Autowired//by this we don;t need to autowire address if only one address is present in xml file
+//	@Qualifier("a2")// if more then one is prent then we can specity useing qualifire
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+
+}

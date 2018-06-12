@@ -1,0 +1,5 @@
+package com.bridgeit.springCore.wire;
+
+public class Student {
+
+}

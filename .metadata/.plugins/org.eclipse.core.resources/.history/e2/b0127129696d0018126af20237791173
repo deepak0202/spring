@@ -1,0 +1,36 @@
+package com.bridgeit.dao;
+
+import org.omg.CORBA.Environment;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+import com.springsource.tcserver.serviceability.request.DataSource;
+
+@Configuration
+@ComponentScan("com.bridgeit")
+@PropertySource("classpath:database.properties")
+public class AppConfig 
+{
+	@Autowired
+	Environment env;
+
+	private final String URL = "url";
+	private final String USER = "dbuser";
+	private final String DRIVER = "driver";
+	private final String PASSWORD = "dbpassword";
+
+	@Bean
+    public DataSource dataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName(env.getRequiredProperty("jdbc.driverClassName"));
+        dataSource.setUrl(env.getRequiredProperty("jdbc.url"));
+        dataSource.setUsername(env.getRequiredProperty("jdbc.username"));
+        dataSource.setPassword(env.getRequiredProperty("jdbc.password"));
+        return dataSource;
+    }
+
+}
